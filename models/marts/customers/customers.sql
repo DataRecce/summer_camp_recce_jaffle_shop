@@ -1,3 +1,11 @@
+-- Model: customers
+-- Description: Contains summary information about customers and their orders.
+-- Date Last Modified: 7/28
+-- Last Modified by: Dori
+-- Notes: 
+
+
+
 with customers as (
 
     select * from {{ ref('stg_customers') }}

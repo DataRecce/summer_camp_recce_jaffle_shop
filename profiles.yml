@@ -6,3 +6,12 @@ jaffle_shop:
       type: duckdb
       path: 'jaffle_shop.duckdb'
       threads: 24
+
+  # this is a prod profile, it is used to run the project on a production database
+    # necessary b/c we are using a file-based engine (DuckDB)
+  # for cloud warehouses (snowflake and bigquery) would use the cloud profile, and wouldn't have this section
+  prod:
+    type: duckdb
+    path: 'jaffle_shop.duckdb'
+    schema: prod
+    threads: 24
