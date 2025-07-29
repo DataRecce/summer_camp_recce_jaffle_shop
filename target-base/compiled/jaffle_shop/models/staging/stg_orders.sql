@@ -1,5 +1,9 @@
 with source as (
+<<<<<<< HEAD
+    select * from "jaffle_shop"."prod"."raw_orders"
+=======
     select * from "jaffle_shop"."main"."raw_orders"
+>>>>>>> main
 
 ),
 

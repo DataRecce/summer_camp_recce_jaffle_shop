@@ -8,7 +8,6 @@ with source as (
 
 ),
 
-renamed as (
 
     select
         id as customer_id,
@@ -17,6 +16,4 @@ renamed as (
 
     from source
 
-)
 
-select * from renamed

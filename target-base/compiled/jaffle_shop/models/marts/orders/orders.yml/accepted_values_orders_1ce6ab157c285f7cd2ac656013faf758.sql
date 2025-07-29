@@ -8,7 +8,11 @@ with all_values as (
         status as value_field,
         count(*) as n_records
 
+<<<<<<< HEAD
+    from "jaffle_shop"."prod"."orders"
+=======
     from "jaffle_shop"."main"."orders"
+>>>>>>> main
     group by status
 
 )

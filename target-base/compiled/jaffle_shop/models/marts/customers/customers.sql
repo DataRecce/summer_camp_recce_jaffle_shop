@@ -8,32 +8,44 @@
 
 with customers as (
 
+<<<<<<< HEAD
+    select * from "jaffle_shop"."prod"."stg_customers"
+=======
     select 
         customer_id,
         first_name,
         last_name
     from "jaffle_shop"."main"."stg_customers"
+>>>>>>> main
 
 ),
 
 orders as (
 
+<<<<<<< HEAD
+    select * from "jaffle_shop"."prod"."stg_orders"
+=======
     select 
         order_id,
         customer_id,
         order_date,
         status
     from "jaffle_shop"."main"."stg_orders"
+>>>>>>> main
 
 ),
 
 payments as (
 
+<<<<<<< HEAD
+    select * from "jaffle_shop"."prod"."stg_payments"
+=======
     select 
         order_id,
         amount,
         payment_method
     from "jaffle_shop"."main"."stg_payments"
+>>>>>>> main
 
 ),
 
@@ -87,6 +99,9 @@ final as (
 
 )
 
+<<<<<<< HEAD
+select * from final
+=======
 select 
     customer_id,
     first_name,
@@ -96,3 +111,4 @@ select
     number_of_orders,
     customer_lifetime_value
 from final
+>>>>>>> main
