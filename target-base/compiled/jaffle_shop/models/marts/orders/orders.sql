@@ -10,13 +10,22 @@
 
 with orders as (
 
-    select * from "jaffle_shop"."prod"."stg_orders"
+    select 
+        order_id,
+        customer_id,
+        order_date,
+        status
+    from "jaffle_shop"."prod"."stg_orders"
 
 ),
 
 payments as (
 
-    select * from "jaffle_shop"."prod"."stg_payments"
+    select 
+        order_id,
+        amount,
+        payment_method
+    from "jaffle_shop"."prod"."stg_payments"
 
 ),
 
@@ -65,4 +74,10 @@ final as (
 
 )
 
-select * from final
+select 
+    order_id,
+    customer_id,
+    order_date,
+    status,
+    amount
+from final

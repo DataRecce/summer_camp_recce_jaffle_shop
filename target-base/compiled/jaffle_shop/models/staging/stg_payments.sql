@@ -1,9 +1,7 @@
 with source as (
     select * from "jaffle_shop"."prod"."raw_payments"
 
-),
-
-renamed as (
+)
 
     select
         id as payment_id,
@@ -14,7 +12,3 @@ renamed as (
         amount / 100 as amount
 
     from source
-
-)
-
-select * from renamed

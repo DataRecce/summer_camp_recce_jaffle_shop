@@ -8,19 +8,32 @@
 
 with customers as (
 
-    select * from "jaffle_shop"."prod"."stg_customers"
+    select 
+        customer_id,
+        first_name,
+        last_name
+    from "jaffle_shop"."prod"."stg_customers"
 
 ),
 
 orders as (
 
-    select * from "jaffle_shop"."prod"."stg_orders"
+    select 
+        order_id,
+        customer_id,
+        order_date,
+        status
+    from "jaffle_shop"."prod"."stg_orders"
 
 ),
 
 payments as (
 
-    select * from "jaffle_shop"."prod"."stg_payments"
+    select 
+        order_id,
+        amount,
+        payment_method
+    from "jaffle_shop"."prod"."stg_payments"
 
 ),
 
@@ -74,4 +87,12 @@ final as (
 
 )
 
-select * from final
+select 
+    customer_id,
+    first_name,
+    last_name,
+    first_order,
+    most_recent_order,
+    number_of_orders,
+    customer_lifetime_value
+from final
