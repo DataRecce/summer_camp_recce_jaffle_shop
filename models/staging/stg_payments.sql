@@ -8,6 +8,7 @@ with source as (
 
 )
 
+)
 
     select
         id as payment_id,

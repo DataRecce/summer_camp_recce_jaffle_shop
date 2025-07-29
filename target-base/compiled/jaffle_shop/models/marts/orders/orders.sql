@@ -10,13 +10,30 @@
 
 with orders as (
 
+<<<<<<< HEAD
     select * from "jaffle_shop"."prod"."stg_orders"
+=======
+    select 
+        order_id,
+        customer_id,
+        order_date,
+        status
+    from "jaffle_shop"."main"."stg_orders"
+>>>>>>> main
 
 ),
 
 payments as (
 
+<<<<<<< HEAD
     select * from "jaffle_shop"."prod"."stg_payments"
+=======
+    select 
+        order_id,
+        amount,
+        payment_method
+    from "jaffle_shop"."main"."stg_payments"
+>>>>>>> main
 
 ),
 
@@ -65,4 +82,18 @@ final as (
 
 )
 
+<<<<<<< HEAD
 select * from final
+=======
+select 
+    order_id,
+    customer_id,
+    order_date,
+    status,
+    credit_card_amount,
+    coupon_amount,
+    bank_transfer_amount,
+    gift_card_amount,
+    amount
+from final
+>>>>>>> main

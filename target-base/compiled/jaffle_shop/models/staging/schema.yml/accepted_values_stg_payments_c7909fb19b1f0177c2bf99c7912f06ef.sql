@@ -8,7 +8,11 @@ with all_values as (
         payment_method as value_field,
         count(*) as n_records
 
+<<<<<<< HEAD
     from "jaffle_shop"."prod"."stg_payments"
+=======
+    from "jaffle_shop"."main"."stg_payments"
+>>>>>>> main
     group by payment_method
 
 )

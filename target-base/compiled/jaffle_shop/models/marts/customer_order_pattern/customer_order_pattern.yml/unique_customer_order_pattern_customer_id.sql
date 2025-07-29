@@ -6,11 +6,7 @@ select
     customer_id as unique_field,
     count(*) as n_records
 
-<<<<<<< HEAD
-from "jaffle_shop"."prod"."stg_customers"
-=======
-from "jaffle_shop"."main"."stg_customers"
->>>>>>> main
+from "jaffle_shop"."main"."customer_order_pattern"
 where customer_id is not null
 group by customer_id
 having count(*) > 1

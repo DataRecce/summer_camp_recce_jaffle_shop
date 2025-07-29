@@ -10,13 +10,22 @@
 
 with orders as (
 
-    select * from {{ ref('stg_orders') }}
+    select 
+        order_id,
+        customer_id,
+        order_date,
+        status
+    from {{ ref('stg_orders') }}
 
 ),
 
 payments as (
 
-    select * from {{ ref('stg_payments') }}
+    select 
+        order_id,
+        amount,
+        payment_method
+    from {{ ref('stg_payments') }}
 
 ),
 
@@ -63,4 +72,14 @@ final as (
 
 )
 
-select * from final
+select 
+    order_id,
+    customer_id,
+    order_date,
+    status,
+    credit_card_amount,
+    coupon_amount,
+    bank_transfer_amount,
+    gift_card_amount,
+    amount
+from final

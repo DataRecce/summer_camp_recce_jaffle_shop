@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: customer_order_pattern
+    description: Contains summary information about customers and their orders.
+
+    columns:
+      - name: customer_id
+        description: This is a unique identifier for a customer
+        tests:
+          - unique
+          - not_null
+      - name: first_order
+        description: Date (UTC) of a customer's first order
+      - name: most_recent_order
+        description: Date (UTC) of a customer's most recent order
+      - name: number_of_orders
+        description: Count of the number of orders a customer has placed
+      - name: days_active
+        description: Number of days between a customer's first and most recent order
+      - name: avg_days_between_orders
+        description: Average number of days between a customer's orders
