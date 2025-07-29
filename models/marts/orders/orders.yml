@@ -30,6 +30,8 @@ models:
         description: Date (UTC) that the order was placed
 
       - name: status
+        # this is a macro, it will look for a documentation file in the docs folder with the name of the model and the name of the column
+        # overkill for this example, but good if you reuse the same documentation across multiple models
         description: '{{ doc("orders_status") }}'
         tests:
           - accepted_values:

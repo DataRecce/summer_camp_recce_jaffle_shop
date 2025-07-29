@@ -11,6 +11,11 @@ python3 -m pip install --upgrade pip
 dbt build
 dbt docs generate # important for later
 dbt docs serve # opens in browser a documentation site
+dbt test
+
+# install recce
+pip install recce
+
 
 
 # I've separated out the yml and documentation files from a single schema. i think that is poor practice.
