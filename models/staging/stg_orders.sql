@@ -14,4 +14,7 @@ with source as (
         order_date,
         status
     from source
+    where status = 'completed'
+    -- NEVER put something like this filter in a production environment
+    -- It's a bad practice to do this type of filtering in the staging layer
 
