@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: customers_order_pattern
+  - name: customer_order_pattern
     description: Contains summary information about customers and their orders.
 
     columns:

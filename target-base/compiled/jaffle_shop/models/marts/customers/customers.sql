@@ -12,7 +12,7 @@ with customers as (
         customer_id,
         first_name,
         last_name
-    from "jaffle_shop"."prod"."stg_customers"
+    from "jaffle_shop"."main"."stg_customers"
 
 ),
 
@@ -23,7 +23,7 @@ orders as (
         customer_id,
         order_date,
         status
-    from "jaffle_shop"."prod"."stg_orders"
+    from "jaffle_shop"."main"."stg_orders"
 
 ),
 
@@ -33,7 +33,7 @@ payments as (
         order_id,
         amount,
         payment_method
-    from "jaffle_shop"."prod"."stg_payments"
+    from "jaffle_shop"."main"."stg_payments"
 
 ),
 

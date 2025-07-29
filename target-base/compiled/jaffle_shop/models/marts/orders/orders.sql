@@ -15,7 +15,7 @@ with orders as (
         customer_id,
         order_date,
         status
-    from "jaffle_shop"."prod"."stg_orders"
+    from "jaffle_shop"."main"."stg_orders"
 
 ),
 
@@ -25,7 +25,7 @@ payments as (
         order_id,
         amount,
         payment_method
-    from "jaffle_shop"."prod"."stg_payments"
+    from "jaffle_shop"."main"."stg_payments"
 
 ),
 
@@ -79,5 +79,9 @@ select
     customer_id,
     order_date,
     status,
+    credit_card_amount,
+    coupon_amount,
+    bank_transfer_amount,
+    gift_card_amount,
     amount
 from final

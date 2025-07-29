@@ -5,7 +5,7 @@
 
 
 select order_id
-from "jaffle_shop"."prod"."orders"
+from "jaffle_shop"."main"."orders"
 where order_id is null
 
 

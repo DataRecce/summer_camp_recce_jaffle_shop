@@ -11,7 +11,7 @@ with customers as (
         first_order,
         most_recent_order,
         number_of_orders
-    from {{ ref('customers') }}
+    from "jaffle_shop"."main"."customers"
 
 )
 
@@ -23,4 +23,3 @@ select
     DATEDIFF('day', first_order, most_recent_order) AS days_active,
     DATEDIFF('day', first_order, most_recent_order) / NULLIF(number_of_orders - 1, 0) AS avg_days_between_orders
 from customers
-
