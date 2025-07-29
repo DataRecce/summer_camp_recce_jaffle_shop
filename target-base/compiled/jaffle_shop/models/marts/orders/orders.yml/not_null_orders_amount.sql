@@ -5,7 +5,7 @@
 
 
 select amount
-from "jaffle_shop"."main"."orders"
+from "jaffle_shop"."prod"."orders"
 where amount is null
 
 

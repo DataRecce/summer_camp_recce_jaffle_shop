@@ -11,7 +11,7 @@ with customers as (
         first_order,
         most_recent_order,
         number_of_orders
-    from "jaffle_shop"."main"."customers"
+    from "jaffle_shop"."prod"."customers"
 
 )
 
