@@ -32,3 +32,5 @@ models:
         node_color: 'silver'
     +docs:
       node_color: 'gold'
+
+

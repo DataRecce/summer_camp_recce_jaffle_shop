@@ -21,3 +21,7 @@ renamed as (
 )
 
 select * from renamed
+---- Here is the change that filters all orders to only completed orders
+---- NEVER put something like this in a production environment
+---- It's a bad practice to do this type of filtering in the staging layer
+where status = 'completed'
