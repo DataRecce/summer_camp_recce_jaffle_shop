@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: stg_customers
+    description: This table has source information about customers, from a csv file.
     columns:
       - name: customer_id
         tests:
@@ -9,6 +10,7 @@ models:
           - not_null
 
   - name: stg_orders
+    description: This table has source information about orders, from a csv file.
     columns:
       - name: order_id
         tests:
@@ -20,6 +22,7 @@ models:
               values: ['placed', 'shipped', 'completed', 'return_pending', 'returned']
 
   - name: stg_payments
+    description: This table has source information about payments, from a csv file.
     columns:
       - name: payment_id
         tests:
