@@ -13,6 +13,5 @@ with source as (
         user_id as customer_id,
         order_date,
         status
-
     from source
 
