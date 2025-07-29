@@ -19,4 +19,4 @@ SELECT
         WHEN customer_lifetime_value BETWEEN 1500 AND 4000 THEN 'Medium Value'
         ELSE 'Low Value'
     END AS value_segment
-FROM "jaffle_shop"."main"."customers"
+FROM "jaffle_shop"."prod"."customers"
